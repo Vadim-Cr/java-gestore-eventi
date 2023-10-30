@@ -1,4 +1,6 @@
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -25,5 +27,18 @@ public class Main {
         System.out.println("Total reserved seats: " + eventoTeatro.getReservedSeats());
         System.out.println("Available seats: " + (eventoTeatro.getTotalSeats() - eventoTeatro.getReservedSeats()));
         scan.close();
+
+        LocalDate dataConcerto = LocalDate.of(2023, 11, 15);  // 15 novembre 2023
+        LocalTime oraConcerto = LocalTime.of(20, 0);  // 20:00
+        BigDecimal prezzoBiglietto = new BigDecimal("59.99");
+
+        Concerto concerto = new Concerto(
+                "Concerto di Eminem",
+                dataConcerto,
+                300,
+                oraConcerto,
+                prezzoBiglietto
+        );
+        System.out.println(concerto);
         }
-   }
+}
