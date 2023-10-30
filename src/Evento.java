@@ -49,7 +49,7 @@ public class Evento {
 
 
     public void prenota(){
-        System.out.println("Seats available: " + totalSeats);
+
         int toReserve = 0;
         // Qui inizia lo Scanner
         Scanner scanner = new Scanner(System.in);
@@ -65,6 +65,7 @@ public class Evento {
                 System.out.println("Thank you for having used our services, you've reserved: " + toReserve + " seat(s).");
             }
             System.out.println( "You've reserved: " + (reservedSeats += toReserve) + " Seats");
+            System.out.println("Seats available: " + (totalSeats-reservedSeats));
         }
     }
 //              QUI CHIEDO SE DISDICE
